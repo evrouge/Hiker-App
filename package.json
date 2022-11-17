@@ -1,0 +1,23 @@
+{
+  "name": "hiker-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evrouge/hiker-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evrouge/hiker-app/issues"
+  },
+  "homepage": "https://github.com/evrouge/hiker-app#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
