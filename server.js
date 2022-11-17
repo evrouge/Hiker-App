@@ -1,4 +1,5 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const app = express();
 
 let PORT = 3000;
@@ -12,4 +13,8 @@ app.get('/', (req, res) => {
 
 app.listen(PORT, () => {
     console.log('listening');
+})
+
+mongoose.connect('mongodb+srv://evrouge:CgmgSg70vGRMtIqw@cluster0.ehndsmy.mongodb.net/?retryWrites=true&w=majority', () => {
+    console.log('connected to mongo');
 })
