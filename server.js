@@ -12,34 +12,33 @@ if (process.env.PORT) {
 }
 ///////////////////////////////
 
-//main page route
-// app.get('/', (req, res) => {
-//     res.redirect('/hike/new');
-// })
-
-//index route
-
-
-//new route
+//main route
 app.get('/', (req, res) => {
-    res.render('index.ejs');
+    res.send('heyyyy');
 })
 
-//create post route // radio rating buttons
-// app.post('/hike/', (req, res) => {
+//index route
+app.get('/hike', (req, res) => {
+    Hike.find({}, (error, allhikes) => {
+        res.render('index.ejs', {
+            hikes: allhikes
+        })
+    })
+})
 
+//new route
+app.get('/hike/new', (req, res) => {
+    res.render('new.ejs');
+})
+
+//completed button / create post route
 app.post('/hike', (req, res) => {
+    //if button selected, hike has been completed
     if (req.body.completed == 'on') {
         req.body.completed = true;
     } else {
         req.body.completed = false;
     }
-    Hike.create(req.body, (error, HikeCompleted) => {
-        res.redirect('/hike');
-    })
-})
-
-app.post('/hike', (req, res) => {
     if (req.body.easy === 'on') {
         req.body.rating = "rated easy";
 
@@ -49,14 +48,12 @@ app.post('/hike', (req, res) => {
     } else if (req.body.difficult === 'on') {
         req.body.rating = "rated difficult";
     }
-    Hike.create(req.body, (error, createdHike) => {
-        res.redirect('/hike');
-    })
+    Hike.create(req.body, (error, HikeCompleted) => {
+        //redirecting to the show route
+        res.redirect('/hike')
+    });
 });
-
-
-
-
+//index route was here///
 //edit route
 
 
@@ -67,9 +64,13 @@ app.post('/hike', (req, res) => {
 
 
 //show route
-
-
-
+app.get('/hike/:id', (req, res) => {
+    Hike.findById(req.params.id, (error, foundHike) => {
+        res.render('show.ejs', {
+            hikes: foundHike
+        })
+    });
+});
 
 /////////LISTENING PORTS///////////////////
 app.listen(PORT, () => {
@@ -79,10 +80,6 @@ app.listen(PORT, () => {
 mongoose.connect('mongodb+srv://evrouge:CgmgSg70vGRMtIqw@cluster0.ehndsmy.mongodb.net/?retryWrites=true&w=majority', () => {
     console.log('connected to mongo');
 })
-
-
-
-
 
 
 

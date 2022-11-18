@@ -5,11 +5,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Show Page</title>
 </head>
 
 <body>
+    <div class="container">
+        <h1>Your Hikes Page</h1>
+        <%=hikes.name%> is located in <%=hikes.location%>.
+                <%=hikes.description%>
+                    This hike is rated <%=hikes.rating%> and
+                        <% if (hikes.completed===true){%>
+                            this hike has been completed.
+                            <% } else { %>
+                                this hike has not been completed yet.
+                                <% } %>
 
+
+                                    <nav class="createNewHikeButton">
+
+                                    </nav>
+                                    <nav class="updateCurrentHike">
+
+                                    </nav>
+    </div>
 </body>
 
 </html>

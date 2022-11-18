@@ -5,11 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create a New Hike Page</title>
+    <title>New Page</title>
 </head>
 
 <body>
-
+    <div class="container">
+        <h1>Hike New Page</h1>
+        <form action="/hike" method="POST">
+            Hike Name: <input type="text" name="name" /><br />
+            Location: <input type="text" name="location" /><br />
+            Miles: <input type="text" name="miles" /><br />
+            Description of the hike: <input type="text" name="description" /><br />
+            Rating: <input type="radio" name="rating" class="rating" value="Easy"> Easy
+            <input type="radio" name="rating" class="rating" value="Moderate"> Moderate
+            <input type="radio" name="rating" class="rating" value="Difficult"> Difficult <br />
+            Completed: <input type="checkbox" name="completed"> <br />
+            <input type="submit" name="submit" value="Save Hike" />
+        </form>
+    </div>
 </body>
 
 </html>
