@@ -1,10 +1,12 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const methodOverride = require('method-override');
 const Hike = require('./models/hikeschema.js');
 const app = express();
 
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
+app.use(methodOverride('_method'));
 
 let PORT = 3000;
 if (process.env.PORT) {
@@ -54,6 +56,7 @@ app.post('/hike', (req, res) => {
     });
 });
 //index route was here///
+
 //edit route
 
 
@@ -61,7 +64,11 @@ app.post('/hike', (req, res) => {
 
 
 //delete route
-
+app.delete('/hike/:id', (req, res) => {
+    Hike.findByIdAndRemove(req.params.id, (error, hikeData) => {
+        res.redirect('/hike');
+    })
+})
 
 //show route
 app.get('/hike/:id', (req, res) => {
