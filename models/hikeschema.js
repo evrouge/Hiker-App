@@ -6,11 +6,7 @@ const hikeSchema = new Schema({
     location: { type: String },
     miles: { type: Number },
     description: { type: String },
-    rating: {
-        type: String, easy: true,
-        moderate: false,
-        difficult: false,
-    },
+    rating: { type: String },
     completed: { type: Boolean }
 })
 
