@@ -85,29 +85,3 @@ mongoose.connect('mongodb+srv://evrouge:CgmgSg70vGRMtIqw@cluster0.ehndsmy.mongod
 
 
 //////////////GRAVEYARD////////////////
-
-//if (req.body.ratingEasy === 'checked') {
-//         req.body.ratingEasy = true;
-//     } else {
-//         req.body.ratingEasy = false;
-//     }
-//     Hike.create(req.body, (error, createdHike) => {
-//         res.send(createdHike)
-//     })
-//     if (req.body.ratingModerate === 'checked') {
-//         req.body.ratingModerate = true;
-//     } else {
-//         req.body.ratingModerate = false;
-//     }
-//     Hike.create(req.body, (error, createdHike) => {
-//         res.send(createdHike)
-//     })
-//     if (req.body.ratingDifficult === 'checked') {
-//         req.body.ratingDifficult = true;
-//     } else {
-//         req.body.ratingDifficult = false;
-//     }
-//     Hike.create(req.body, (error, createdHike) => {
-//         res.send(createdHike)
-//     })
-// });
