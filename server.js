@@ -20,7 +20,9 @@ app.get('/', (req, res) => {
 
 
 //new route
-
+app.get('/hike/new', (req, res) => {
+    res.render('new.ejs');
+})
 
 //create post route
 
