@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const Hike = require('./models/hikeschema.js');
+const { updateOne } = require('./models/hikeschema.js');
 const app = express();
 
 app.use(express.static('public'));
@@ -55,11 +56,10 @@ app.post('/hike', (req, res) => {
         res.redirect('/hike')
     });
 });
-//index route was here///
 
 //edit route (new today)
 app.get('/hike/:id/edit', (req, res) => {
-    Hike.findById(req.params / id, (error, foundhikes) => {
+    Hike.findById(req.params.id, (error, foundhikes) => {
         res.render('edit.ejs', {
             hiking: foundhikes
         });
@@ -73,7 +73,9 @@ app.put('/hike/:id', (req, res) => {
     } else {
         req.body.completed = false;
     }
-    res.render('edit.ejs');
+    Hike.findByIdAndUpdate(req.params.id, req.body, { new: true }, (error, updatedHike) => {
+        res.redirect('/hike');
+    });
 })
 
 //delete route
