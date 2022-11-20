@@ -57,18 +57,31 @@ app.post('/hike', (req, res) => {
 });
 //index route was here///
 
-//edit route
+//edit route (new today)
+app.get('/hike/:id/edit', (req, res) => {
+    Hike.findById(req.params / id, (error, foundhikes) => {
+        res.render('edit.ejs', {
+            hiking: foundhikes
+        });
+    });
+});
 
-
-//second part of update route
-
+//second part of update route (new today)
+app.put('/hike/:id', (req, res) => {
+    if (req.body.completed === 'on') {
+        req.body.completed === true;
+    } else {
+        req.body.completed = false;
+    }
+    res.render('edit.ejs');
+})
 
 //delete route
 app.delete('/hike/:id', (req, res) => {
     Hike.findByIdAndRemove(req.params.id, (error, hikeData) => {
         res.redirect('/hike');
-    })
-})
+    });
+});
 
 //show route
 app.get('/hike/:id', (req, res) => {
@@ -82,13 +95,8 @@ app.get('/hike/:id', (req, res) => {
 /////////LISTENING PORTS///////////////////
 app.listen(PORT, () => {
     console.log('listening');
-})
+});
 
 mongoose.connect('mongodb+srv://evrouge:CgmgSg70vGRMtIqw@cluster0.ehndsmy.mongodb.net/?retryWrites=true&w=majority', () => {
     console.log('connected to mongo');
-})
-
-
-
-
-//////////////GRAVEYARD////////////////
+});
