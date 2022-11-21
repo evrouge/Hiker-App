@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="/styles.css">
     <title>New Page</title>
 </head>
@@ -13,17 +15,14 @@
     <div class="container">
         <h1>Hike New Page</h1>
         <form action="/hike" method="POST">
-            Hike Name: <input type="text" name="name" required /><br />
-            Location: <input type="text" name="location" required /><br />
-            Miles: <input type="text" name="miles" required /><br />
-            Description of the hike: <input type="text" name="description" required /><br />
-            Rating: <label class="easy"><input type="radio" name="rating" class="rating" value="easy" required>
-                Easy
-            </label>
-            <label class="moderate"><input type="radio" name="rating" class="rating" value="moderate"> Moderate</label>
-            <label class="difficult"><input type="radio" name="rating" class="rating" value="difficult"> Difficult
-            </label><br />
-            Completed: <input type="checkbox" name="completedHike"> <br />
+            Hike Name: <input type="text" class="hikename" name="name" required /><br />
+            Location: <input type="text" class="location" name="location" required /><br />
+            Miles: <input type="text" class="miles" name="miles" required /><br />
+            Description of the hike: <input type="text" class="description" name="description" required /><br />
+            Rating: <input type="radio" name="rating" class="rating" value="easy" required> Easy
+            <input type="radio" name="rating" class="rating" value="moderate"> Moderate
+            <input type="radio" name="rating" class="rating" value="difficult"> Difficult <br />
+            Completed: <input type="checkbox" name="completedHike" class="button"> <br />
             <input type="submit" name="submit" value="Save Hike" />
         </form>
         <nav>

@@ -11,6 +11,32 @@ ul {
     list-style-type: none;
 }
 
-.name {
+a:hover {
+    background-color: white;
+    text-decoration: none;
+    border-radius: 40px;
+    border: .3em dotted black;
+}
+
+a {
     color: green;
+}
+
+input[type=text] {
+    border: 2px solid red;
+    border-radius: 4px;
+    width: 40%;
+
+}
+
+
+/*---------- classes ------------*/
+.container {
+    letter-spacing: .3em;
+
+}
+
+.name {
+    color: white;
+
 }
