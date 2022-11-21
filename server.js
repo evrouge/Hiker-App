@@ -42,15 +42,7 @@ app.post('/hike', (req, res) => {
     } else {
         req.body.completedHike = false;
     };
-    if (req.body.easy === 'on') {
-        req.body.rating = "rated easy";
-
-    } else if (req.body.moderate === 'on') {
-        req.body.rating = "rated moderate";
-
-    } else if (req.body.difficult === 'on') {
-        req.body.rating = "rated difficult";
-    }
+    //selecting the radio button function goes here
     Hike.create(req.body, (error, HikeCompleted) => {
         //redirecting to the show route
         res.redirect('/hike')
@@ -69,15 +61,12 @@ app.get('/hike/:id/edit', (req, res) => {
 
 //second part of update route
 app.put('/hike/:id', (req, res) => {
-    if (req.body.completedHike === 'on') {
-        req.body.completedHike = true;
-    } else {
-        req.body.completedHike = false;
-    }
     Hike.findByIdAndUpdate(req.params.id, req.body, { new: true }, (error, foundhikes) => {
+        console.log(req.body)
         res.redirect('/hike');
     });
 })
+
 
 //delete route
 app.delete('/hike/:id', (req, res) => {
@@ -103,3 +92,35 @@ app.listen(PORT, () => {
 mongoose.connect('mongodb+srv://evrouge:CgmgSg70vGRMtIqw@cluster0.ehndsmy.mongodb.net/?retryWrites=true&w=majority', () => {
     console.log('connected to mongo');
 });
+
+
+
+//graveyard
+// if (req.body.easy === 'checked') {
+    //     req.body.rating = "Easy";
+
+    // } else if (req.body.moderate === 'checked') {
+    //     req.body.rating = "Moderate";
+
+    // } else if (req.body.difficult === 'checked') {
+    //     req.body.rating = "Difficult";
+    // }
+
+
+
+    // if (req.body.easy.checked === true) {
+    //     req.body.rating = 'easy';
+    // } else if (req.body.rating.moderate.checked === true) {
+    //     req.body.rating = 'moderate';
+    // } else if (req.body.difficult.rating.checked === true) {
+    //     req.body.rating = 'moderate'
+    // }
+
+
+    // if (req.body.rating === 'easy') {
+    //     req.body.rating == true;
+    // } else if (req.body.rating === 'moderate') {
+    //     req.body.rating == true;
+    // } else if (req.body.rating === 'difficult') {
+    //     req.body.rating == true;
+    // }

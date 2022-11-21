@@ -1,0 +1,16 @@
+body {
+    background-color: aqua;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.name {
+    color: green;
+}

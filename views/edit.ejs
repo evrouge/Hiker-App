@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
     <title>Edit Hike Page</title>
+
 </head>
 
 <body>
@@ -13,19 +15,36 @@
         <h1>Edit Your Hike</h1>
 
         <form action="/hike/<%=hiking.id%>?_method=PUT" method="POST">
-            Hike Name: <input type="text" name='name' value="<%=hiking.name%>" /><br />
-            Location: <input type="text" name="location" value="<%=hiking.location%>" /><br />
-            Miles: <input type="text" name="miles" value="<%=hiking.miles%>" /><br />
-            Description of the hike: <input type="text" name="description" value="<%=hiking.description%>" /><br />
-            Rating: <input type="radio" name="rating" /> Easy
-            <input type="radio" name="rating" /> Moderate
-            <input type="radio" name="rating" /> Difficult <br />
-            Completed: <input type="checkbox" name="completed" <% if(hiking.completedHike===true) { %>
+            <label class="name"> Hike Name: <input type="text" name="name" value="<%=hiking.name%>" /></label><br />
+            <label class="location"> Location: <input type="text" name="location" value="<%=hiking.location%>" />
+            </label><br />
+            <label class="miles"> Miles: <input type="text" name="miles" value="<%=hiking.miles%>" /></label><br />
+            <label class="description"> Description of the hike: <input type="text" name="description"
+                    value="<%=hiking.description%>" /></label><br />
+            Rating: <input type="radio" name="rating" value="easy" <% if(hiking.rating==='easy' ){%>
             checked
-            <%}%>
-                />
-                <br />
-                <input type="submit" name="submit" value="Submit Changes" />
+            <%}%>/> Easy
+
+                <input type="radio" name="rating" value="moderate" <% if (hiking.rating==='moderate' ){ %>
+                checked
+                <%}%>/> Moderate
+
+                    <label class="difficult"><input type="radio" name="rating" value="difficult" <% if
+                            (hiking.rating==='difficult' ){%>
+                        checked
+                        <%}%> /> Difficult
+                    </label>
+
+                    <br />
+
+                    <label class="completed"> Completed: <input type="checkbox" name="completed" <%
+                            if(hiking.completedHike===true) { %>
+                        checked
+                        <%}%>
+                            />
+                    </label>
+                    <br />
+                    <label class="submit"><input type="submit" name="submit" value="Submit Changes" /></label>
         </form>
     </div>
 </body>
