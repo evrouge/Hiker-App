@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const Hike = require('./models/hikeschema.js');
-const { updateOne } = require('./models/hikeschema.js');
+//const { updateOne } = require('./models/hikeschema.js');
 const app = express();
 
 app.use(express.static('public'));
@@ -17,7 +17,7 @@ if (process.env.PORT) {
 
 //main route
 app.get('/', (req, res) => {
-    res.send('heyyyy');
+    res.render('new.ejs');
 })
 
 //index route
@@ -37,11 +37,11 @@ app.get('/hike/new', (req, res) => {
 //completed button / create post route
 app.post('/hike', (req, res) => {
     //if button selected, hike has been completed
-    if (req.body.completed == 'on') {
-        req.body.completed = true;
+    if (req.body.completedHike === 'on') {
+        req.body.completedHike = true;
     } else {
-        req.body.completed = false;
-    }
+        req.body.completedHike = false;
+    };
     if (req.body.easy === 'on') {
         req.body.rating = "rated easy";
 
@@ -57,7 +57,8 @@ app.post('/hike', (req, res) => {
     });
 });
 
-//edit route (new today)
+
+//edit route
 app.get('/hike/:id/edit', (req, res) => {
     Hike.findById(req.params.id, (error, foundhikes) => {
         res.render('edit.ejs', {
@@ -66,14 +67,14 @@ app.get('/hike/:id/edit', (req, res) => {
     });
 });
 
-//second part of update route (new today)
+//second part of update route
 app.put('/hike/:id', (req, res) => {
-    if (req.body.completed === 'on') {
-        req.body.completed === true;
+    if (req.body.completedHike === 'on') {
+        req.body.completedHike = true;
     } else {
-        req.body.completed = false;
+        req.body.completedHike = false;
     }
-    Hike.findByIdAndUpdate(req.params.id, req.body, { new: true }, (error, updatedHike) => {
+    Hike.findByIdAndUpdate(req.params.id, req.body, { new: true }, (error, foundhikes) => {
         res.redirect('/hike');
     });
 })
@@ -87,9 +88,9 @@ app.delete('/hike/:id', (req, res) => {
 
 //show route
 app.get('/hike/:id', (req, res) => {
-    Hike.findById(req.params.id, (error, foundHike) => {
+    Hike.findById(req.params.id, (error, completedHike) => {
         res.render('show.ejs', {
-            hikes: foundHike
+            hikers: completedHike
         })
     });
 });

@@ -9,24 +9,26 @@
 </head>
 
 <body>
+    <h1>show page</h1>
     <div class="container">
         <h1>Your Hikes Page</h1>
-        <%=hikes.name%> is located in <%=hikes.location%>. <br />
-                This hike is <%=hikes.miles%> miles. <br />
-                    Description of the hike: <%=hikes.description%> <br />
-                        This hike is rated: <%=hikes.rating%>. <br />
-                            <% if (hikes.completed===true){%>
+        <%=hikers.name%> is located in
+            <%=hikers.location%>. <br />
+                This hike is <%=hikers.miles%> miles. <br />
+                    Description of the hike: <%=hikers.description%><br />
+                        This hike is rated: <%=hikers.rating%>. <br />
+                            <% if (hikers.completedHike===true){%>
                                 This hike has been completed.
                                 <% } else { %>
                                     This hike has not been completed yet.
                                     <% } %>
 
 
-                                        <nav class="createNewHikeButton">
+                                        <nav>
                                             <a href="/hike/new">Create a new hike</a>
                                         </nav>
-                                        <nav class="updateCurrentHike">
-                                            <a href="">Update Your Hike</a>
+                                        <nav>
+                                            <a href="/hike/<%=hikers.id%>/edit">Update Your Hike</a>
                                         </nav>
     </div>
 </body>

@@ -6,8 +6,8 @@ const hikeSchema = new Schema({
     location: { type: String },
     miles: { type: Number },
     description: { type: String },
-    rating: { type: String },
-    completed: { type: Boolean }
+    rating: { type: String, required: true },
+    completedHike: { type: Boolean }
 })
 
 const Hike = mongoose.model('hike', hikeSchema);
