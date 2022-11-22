@@ -15,19 +15,27 @@
     <div class="container">
         <h1>Hike New Page</h1>
         <form action="/hike" method="POST">
-            Hike Name: <input type="text" class="hikename" name="name" required /><br />
-            Location: <input type="text" class="location" name="location" required /><br />
-            Total Miles: <input type="text" class="miles" name="miles" required /><br />
-            Description of the hike: <input type="text" class="description" name="description" required /><br />
-            Rating: <input type="radio" name="rating" class="rating" value="easy" required> Easy
-            <input type="radio" name="rating" class="rating" value="moderate"> Moderate
-            <input type="radio" name="rating" class="rating" value="difficult"> Difficult <br />
-            Completed: <input type="checkbox" name="completedHike" class="button"> <br />
-            <input type="submit" name="submit" value="Save Hike" />
+            <div class="hikename">
+                Hike Name: <input type="text" class="hikename" name="name" required />
+            </div><br />
+            <div class="locationname">Location: <input type="text" class="location" name="location" required /></div>
+            <br />
+            <div class="mielsname">Total Miles: <input type="text" class="miles" name="miles" required /></div><br />
+            <div class="descriptionname">Description of the hike: <input type="text" class="description"
+                    name="description" required /></div><br />
+            <div class="ratingname">Rating: <input type="radio" name="rating" class="rating" value="easy" required> Easy
+                <input type="radio" name="rating" class="rating" value="moderate"> Moderate
+                <input type="radio" name="rating" class="rating" value="difficult"> Difficult
+            </div><br />
+            <div class="completedname">Completed: <input type="checkbox" name="completedHike" class="savebutton"> <br />
+                <input type="submit" name="submit" class="savehike" value="Save Hike" />
+            </div>
         </form>
-        <nav>
-            <a href="/hike/">See My List of Hikes</a>
-        </nav>
+        <div class="seehikelist">
+            <nav>
+                <a href="/hike/">See My List of Hikes</a>
+            </nav>
+        </div>
     </div>
 </body>
 
