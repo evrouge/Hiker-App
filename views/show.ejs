@@ -12,18 +12,17 @@
 </head>
 
 <body>
-    <h1>show page</h1>
     <div class="container">
-        <h1>Your Hikes Page</h1>
+        <h1>Your Hikes:</h1>
         <%=hikers.name%> is located in
             <%=hikers.location%>. <br />
-                This hike is <%=hikers.miles%> miles. <br />
+                This hike is <%=hikers.miles%> miles total. <br />
                     Description of the hike: <%=hikers.description%><br />
                         This hike is rated: <%=hikers.rating%>. <br />
                             <% if (hikers.completedHike===true){%>
-                                This hike has been completed.
+                                I have completed this hike.
                                 <% } else { %>
-                                    This hike has not been completed yet.
+                                    I have not completed this hike yet!
                                     <% } %>
 
 
