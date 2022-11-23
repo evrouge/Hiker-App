@@ -7,7 +7,8 @@ const hikeSchema = new Schema({
     miles: { type: Number },
     description: { type: String },
     rating: { type: String },
-    completedHike: { type: Boolean }
+    completedHike: { type: Boolean },
+    image: { type: String }
 })
 
 const Hike = mongoose.model('hike', hikeSchema);

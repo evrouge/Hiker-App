@@ -17,12 +17,12 @@
         <h1>Edit Your Hike</h1>
 
         <form action="/hike/<%=hiking.id%>?_method=PUT" method="POST">
-            <label class="name"> Hike Name: <input type="text" name="name" value="<%=hiking.name%>" /></label><br />
-            <label class="location"> Location: <input type="text" name="location" value="<%=hiking.location%>" />
-            </label><br />
-            <label class="miles"> Miles: <input type="text" name="miles" value="<%=hiking.miles%>" /></label><br />
-            <label class="description"> Description of the hike: <input type="text" name="description"
-                    value="<%=hiking.description%>" /></label><br />
+            <div class="hikename"> Hike Name: <input type="text" name="name" value="<%=hiking.name%>" /></div><br />
+            <div class="locationname"> Location: <input type="text" name="location" value="<%=hiking.location%>" />
+            </div><br />
+            <div class="milesname"> Miles: <input type="text" name="miles" value="<%=hiking.miles%>" /></div><br />
+            <div class="descriptionname"> Description of the hike: <input type="text" name="description"
+                    value="<%=hiking.description%>" /></div><br />
             Rating: <input type="radio" name="rating" value="easy" <% if(hiking.rating==='easy' ){%>
             checked
             <%}%>/> Easy
@@ -46,6 +46,9 @@
                             />
                     </label>
                     <br />
+                    <div class="addphoto">
+                        <input type="file" name="inputimage" accept="image/png, image/jpeg" />
+                    </div>
                     <label class="submit"><input type="submit" name="submit" value="Submit Changes" /></label>
         </form>
     </div>
