@@ -47,9 +47,10 @@
                     </label>
                     <br />
                     <div class="addphoto">
-                        <input type="file" name="inputimage" accept="image/png, image/jpeg" />
+                        Add your photo (URL)<input type="url" name="image" value="<%=hiking.image%>" />
                     </div>
-                    <label class="submit"><input type="submit" name="submit" value="Submit Changes" /></label>
+                    <label class="submit"><input type="submit" placeholder="https://example.com" name="submit" size="40"
+                            value="Submit Changes" /></label>
         </form>
     </div>
 </body>

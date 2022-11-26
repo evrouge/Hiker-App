@@ -25,6 +25,7 @@ a:hover {
 
 a {
     color: green;
+    transition-duration: 0.4s;
 }
 
 input[type=text] {
@@ -71,3 +72,18 @@ input[type=text] {
     border-radius: 50px;
     margin: .3rem;
 }
+
+.deletebtn {
+    border-radius: 40px;
+    background: lightblue;
+    color: darkgreen;
+    border: 1px solid yellow;
+    transition-duration: 0.4s;
+}
+
+.deletebtn:hover {
+    background-color: yellow;
+}
+
+
+/* testing grid stuff here */

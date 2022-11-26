@@ -2,7 +2,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const Hike = require('./models/hikeschema.js');
-//const { updateOne } = require('./models/hikeschema.js');
 const app = express();
 
 app.use(express.static('public'));
@@ -92,35 +91,3 @@ app.listen(PORT, () => {
 mongoose.connect('mongodb+srv://evrouge:CgmgSg70vGRMtIqw@cluster0.ehndsmy.mongodb.net/?retryWrites=true&w=majority', () => {
     console.log('connected to mongo');
 });
-
-
-
-//graveyard
-// if (req.body.easy === 'checked') {
-    //     req.body.rating = "Easy";
-
-    // } else if (req.body.moderate === 'checked') {
-    //     req.body.rating = "Moderate";
-
-    // } else if (req.body.difficult === 'checked') {
-    //     req.body.rating = "Difficult";
-    // }
-
-
-
-    // if (req.body.easy.checked === true) {
-    //     req.body.rating = 'easy';
-    // } else if (req.body.rating.moderate.checked === true) {
-    //     req.body.rating = 'moderate';
-    // } else if (req.body.difficult.rating.checked === true) {
-    //     req.body.rating = 'moderate'
-    // }
-
-
-    // if (req.body.rating === 'easy') {
-    //     req.body.rating == true;
-    // } else if (req.body.rating === 'moderate') {
-    //     req.body.rating == true;
-    // } else if (req.body.rating === 'difficult') {
-    //     req.body.rating == true;
-    // }

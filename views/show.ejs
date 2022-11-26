@@ -23,16 +23,17 @@
                                 I have completed this hike.
                                 <% } else { %>
                                     I have not completed this hike yet!
-                                    <% } %>
+                                    <%=hikers.image%>
+                                        <% } %>
 
 
 
-                                        <nav>
-                                            <a href="/hike/new">Create a new hike</a>
-                                        </nav>
-                                        <nav>
-                                            <a href="/hike/<%=hikers.id%>/edit">Update Your Hike</a>
-                                        </nav>
+                                            <nav>
+                                                <a href="/hike/new">Create a new hike</a>
+                                            </nav>
+                                            <nav>
+                                                <a href="/hike/<%=hikers.id%>/edit">Update Your Hike</a>
+                                            </nav>
     </div>
 </body>
 
