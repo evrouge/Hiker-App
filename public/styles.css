@@ -1,11 +1,11 @@
-html {
+/* html {
     height: 100%;
     width: 100%;
-}
+} */
 
 body {
     text-align: center;
-    background-image: linear-gradient(to top, #33ccff 0%, #29AB87 100%);
+    background-image: linear-gradient(to left, #33ccff 40%, #29AB87 100%);
 }
 
 h1 {
@@ -39,6 +39,12 @@ input[type=text] {
     letter-spacing: .3em;
 }
 
+img {
+    height: 30%;
+    width: 30%;
+    max-width: 30%;
+    max-height: 30%;
+}
 
 /* -------------new & edit ejs page styling ------------------*/
 
