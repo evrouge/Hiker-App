@@ -34,6 +34,8 @@ input[type=text] {
     letter-spacing: .3em;
 }
 
+/* -------------pictures styling--------------- */
+
 img {
     height: 30%;
     width: 30%;
@@ -68,11 +70,40 @@ img {
     margin: .3rem;
 }
 
+/*--- only new page---*/
+
+.newhikepage {
+    margin: 2rem;
+    color: darkgreen;
+    text-shadow: 2px 2px black;
+    text-decoration: underline;
+}
+
 .savehike {
     color: white;
     background-color: #29AB87;
     border-radius: 50px;
     margin: .3rem;
+}
+
+/* ---------only edit page----------*/
+
+.edithike {
+    margin: 2rem;
+    color: darkgreen;
+    text-decoration: underline;
+    text-shadow: 2px 2px black;
+}
+
+
+
+/* ------- index page styling ----- */
+
+.hikeslist {
+    margin: 2rem;
+    color: darkgreen;
+    text-decoration: overline underline;
+    text-shadow: 2px 2px black;
 }
 
 .deletebtn {
@@ -93,5 +124,8 @@ img {
     margin-bottom: 1.5rem;
 }
 
-
-/* testing grid stuff here */
+.createnewhikebtn {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 3em;
+}
