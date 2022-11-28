@@ -23,7 +23,8 @@
                     <form action="/hike/<%=hikes[i].id%>?_method=DELETE" method="POST">
                         <input type="submit" value="Delete Hike" class="deletebtn" />
                     </form>
-                    <a href="/hike/<%=hikes[i].id%>/edit">Edit</a>
+                    <div class="edit">
+                    <a href="/hike/<%=hikes[i].id%>/edit">Edit</a></div>
                 </li>
                 <% } %>
         </ul>

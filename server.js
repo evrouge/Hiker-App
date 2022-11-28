@@ -16,7 +16,7 @@ if (process.env.PORT) {
 
 //main route
 app.get('/', (req, res) => {
-    res.render('new.ejs');
+    res.render('index.ejs');
 })
 
 //index route
