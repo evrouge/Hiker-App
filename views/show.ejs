@@ -20,12 +20,11 @@
                     Description of the hike: <%=hikers.description%><br />
                         This hike is rated: <%=hikers.rating%>. <br />
                             <% if (hikers.completedHike===true){%>
-                                I have completed this hike.
+                                I have completed this hike. <br />
                                 <% } else { %>
-                                    I have not completed this hike yet!
-                                    <%=hikers.image%>
-                                        <% } %>
-
+                                    I have not completed this hike yet! <br />
+                                    <% } %>
+                                        Picture of my hike: <img src="<%=hikers.image%>"/>
 
 
                                             <nav>

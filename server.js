@@ -61,10 +61,9 @@ app.get('/hike/:id/edit', (req, res) => {
 //second part of update route
 app.put('/hike/:id', (req, res) => {
     Hike.findByIdAndUpdate(req.params.id, req.body, { new: true }, (error, foundhikes) => {
-        console.log(req.body)
         res.redirect('/hike');
     });
-})
+});
 
 
 //delete route
