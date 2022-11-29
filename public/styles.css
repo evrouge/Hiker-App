@@ -52,7 +52,11 @@ input[type=text] {
     border: 2px solid lightgreen;
     border-radius: 6px;
     width: 40%;
+    transition-duration: .4s;
+}
 
+input[type=text]:hover {
+    background-color: yellow;
 }
 
 .container {
@@ -95,6 +99,22 @@ img {
     margin: .3rem;
 }
 
+.seehikelist {
+    margin: .7rem;
+}
+
+input[type=submit] {
+    margin: 1.5em;
+    border: 2px solid lightgreen;
+    border-radius: 10px;
+    background-color: lightgreen;
+    transition-duration: .4s;
+}
+
+input[type=submit]:hover {
+    background-color:yellow;
+}
+
 /*--- new page---*/
 
 .newhikepage {
@@ -135,7 +155,7 @@ img {
     color: darkgreen;
     border: 1px solid yellow;
     transition-duration: 0.4s;
-    margin: .5rem;
+    margin: .1rem;
 }
 
 .deletebtn:hover {
@@ -143,13 +163,13 @@ img {
 }
 
 #edit {
-    margin: .2rem;
-    margin-bottom: 1.5rem;
+    margin: .1rem;
+    margin-bottom: 1rem;
 }
 
 .createnewhikebtn {
     margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 7em;
     margin-left: 3em;
 }
 
@@ -189,4 +209,17 @@ img {
     margin: .1rem;
     color: green;
     background-color: white;
+}
+
+.newbtn {
+    margin: 1rem;
+}
+
+.hikerbutton {
+    margin: 1rem;
+}
+
+.backbutton {
+    margin: 1rem;
+    margin-bottom: 7em;
 }

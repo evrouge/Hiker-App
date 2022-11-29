@@ -27,11 +27,14 @@
                                         <div class="hikerspic">Picture from my hike: <br/><img src="<%=hikers.image%>"/> </div>
 
 
-                                            <nav>
-                                                <a href="/hike/new" class="newhikebtn">Create a new hike</a>
+                                            <nav class="newbtn">
+                                                <a href="/hike/new">Create a new hike</a>
                                             </nav>
-                                            <nav>
-                                                <a href="/hike/<%=hikers.id%>/edit" class="editbtn">Update Your Hike</a>
+                                            <nav class="hikerbutton">
+                                                <a href="/hike/<%=hikers.id%>/edit">Update Your Hike</a>
+                                            </nav>
+                                            <nav class="backbutton">
+                                                <a href="/hike/">Back</a>
                                             </nav>
     </div>
 </body>
