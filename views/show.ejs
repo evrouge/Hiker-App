@@ -13,25 +13,25 @@
 
 <body>
     <div class="container">
-        <h1>Your Hikes:</h1>
-        <%=hikers.name%> is located in
-            <%=hikers.location%>. <br />
-                This hike is <%=hikers.miles%> miles total. <br />
-                    Description of the hike: <%=hikers.description%><br />
-                        This hike is rated: <%=hikers.rating%>. <br />
-                            <% if (hikers.completedHike===true){%>
-                                I have completed this hike. <br />
+        <h1>My Hike:</h1>
+        <div class="hikersname"><%=hikers.name%> is located in
+            <%=hikers.location%>. </div><br />
+                <div class="hikersmiles">This hike is <%=hikers.miles%> miles total. </div><br />
+                    <div class="hikersdescription">Description of the hike: <%=hikers.description%></div><br />
+                        <div class="hikersrating">This hike is rated: <%=hikers.rating%>. </div><br />
+                            <div class="completedhike"><% if (hikers.completedHike===true){%>
+                                I have completed this hike. </div><br />
                                 <% } else { %>
-                                    I have not completed this hike yet! <br />
+                                    <div class="notcompleted"> I have not completed this hike yet! </div><br />
                                     <% } %>
-                                        Picture from my hike: <br/><img src="<%=hikers.image%>"/>
+                                        <div class="hikerspic">Picture from my hike: <br/><img src="<%=hikers.image%>"/> </div>
 
 
                                             <nav>
-                                                <a href="/hike/new">Create a new hike</a>
+                                                <a href="/hike/new" class="newhikebtn">Create a new hike</a>
                                             </nav>
                                             <nav>
-                                                <a href="/hike/<%=hikers.id%>/edit">Update Your Hike</a>
+                                                <a href="/hike/<%=hikers.id%>/edit" class="editbtn">Update Your Hike</a>
                                             </nav>
     </div>
 </body>

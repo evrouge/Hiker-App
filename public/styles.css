@@ -12,7 +12,7 @@ ul {
 }
 
 a:hover {
-    background-color: white;
+    background-color: lightyellow;
     text-decoration: none;
     border-radius: 40px;
     border: .3em dotted black;
@@ -70,7 +70,7 @@ img {
     margin: .3rem;
 }
 
-/*--- only new page---*/
+/*--- new page---*/
 
 .newhikepage {
     margin: 2rem;
@@ -86,7 +86,7 @@ img {
     margin: .3rem;
 }
 
-/* ---------only edit page----------*/
+/* -------- edit page----------*/
 
 .edithike {
     margin: 2rem;
@@ -97,7 +97,7 @@ img {
 
 
 
-/* ------- index page styling ----- */
+/* ------- index page ----- */
 
 .hikeslist {
     margin: 2rem;
@@ -128,4 +128,42 @@ img {
     margin-top: 3rem;
     margin-bottom: 3rem;
     margin-left: 3em;
+}
+
+/* ------- show page -------- */
+
+.hikersname {
+    margin: .1rem;
+    color: green;
+    background-color:white;
+}
+
+.hikersmiles {
+    margin: .1rem;
+}
+
+.hikersdescription {
+    margin: .1rem;
+    color:green;
+    background-color:white;
+}
+
+.hikersrating {
+    margin: .1rem;
+}
+
+.hikerspic {
+    margin: .1rem;
+}
+
+.completedhike {
+    margin: .1rem;
+    color: green;
+    background-color: white;
+}
+
+.notcompleted {
+    margin: .1rem;
+    color: green;
+    background-color: white;
 }
