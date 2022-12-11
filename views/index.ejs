@@ -17,20 +17,22 @@
         <ul>
             <% for (let i=0; i < hikes.length; i++) { %>
                 <li><img src="<%=hikes[i].image%>"></br>
-                <a href="/hike/<%=hikes[i].id; %>">
+                    <a href="/hike/<%=hikes[i].id; %>">
                         <%=hikes[i].name;%>
                     </a><br />
                     <form action="/hike/<%=hikes[i].id%>?_method=DELETE" method="POST">
                         <input type="submit" value="Delete" class="deletebtn" />
                     </form>
                     <div class="edit">
-                    <a href="/hike/<%=hikes[i].id%>/edit">Edit</a></div>
+                        <a href="/hike/<%=hikes[i].id%>/edit"></a>
+                    </div>
                 </li>
                 <% } %>
         </ul>
         <nav>
             <div class="createnewhikebtn">
-            <a href="/hike/new">Create a new Hike</a></div>
+                <a href="/hike/new">Create a new Hike</a>
+            </div>
         </nav>
 
     </div>

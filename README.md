@@ -12,4 +12,4 @@
 
 ### Project deployed on Heroku:
 
-## hhtps://safe-bastion-22148.herokuapp.com/hike/
+## hhtps://safe-bastion-22148.herokuapp.com/hike
